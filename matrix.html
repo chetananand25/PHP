@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>matrix</title>
+</head>
+
+<body>
+  <script>
+    var i,r,c,j;
+    r= parseInt(prompt("enter size of row"));
+    c= parseInt(prompt("enter size of column"));
+
+var a= new Array (r);
+for (i=0 ; i<r;i++);
+{
+  a[i]= new Array (c);
+}
+for (i=0; i<r ; i++)
+{
+  for (j=0; j<c ; j++)
+{
+  a[i][j] = parseInt(prompt("enter value of matrix"));
+}
+}
+
+
+document.write("<h3> Matrix is </h3><br>");
+  for (i=0; i<r ;i++)
+  {
+    for (j=0 ; j<c ; j++);
+  {
+  document.write("<b>"+ a[i][j]+"<br>+nbsp")
+  {
+    document.write("<br>");
+  }
+  }
+  }
+
+  </script>
+
+</body>
+
+</html>

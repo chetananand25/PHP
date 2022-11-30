@@ -1,0 +1,67 @@
+﻿<html>
+
+<head>
+    <title>login</title>
+    <script>
+        function validate() {
+            uname = document.getElementById("un").value;
+            password = document.getElementById("pass").value;
+            if (uname == "") {
+                alert("user name is blank")
+                document.getElementById("un").focus();
+                return false;
+            }
+            if (!uname.match(/^[\W\w]{8,15}$/)) {
+                aler("invalid user name")
+                document.getElementById("un").focus();
+                return false;
+            }
+            if (password == "") {
+                alert("password name is blank")
+                document.getElementById("pass").focus();
+                return false;
+            }
+            if (!password.match(/^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[\W_])[\W\w]{8,15}$/)) {
+                alert("invalid password")
+                document.getElementById("pass").focus();
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <center>
+        <fieldset style="width: 300px">
+            <form action="loginc.php" method="post" onsubmit="return validate()">
+                <table>
+                    <b> Login page<hr></b>
+                    <tr>
+                        <td>
+                            <a href="signup.html">signup
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Username</td>
+                        <td><input type="text" required placeholder="enter username " id="unm" name="uname"></td>
+
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td><input type="password" required placeholder="enter password" id="pnm" name="pname">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="login" name="submited"></td>
+                    </tr>
+                </table>
+            </form>
+        </fieldset>
+    </center>
+</body>
+
+</html>
+
+</html>
